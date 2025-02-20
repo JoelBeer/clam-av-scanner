@@ -12,7 +12,6 @@ sudo freshclam
 echo "0 3 * * * root freshclam" | sudo tee -a /etc/crontab
 
 # Set environment variables
-echo 'export BUCKET_NAME="<bucket-name>"' >> /etc/environment
 echo 'export AWS_REGION="<region>"' >> /etc/environment
 echo 'export SQS_QUEUE_URL="https://sqs.eu-west-2.amazonaws.com/<account-id>/<queue-name>"' >> /etc/environment
 
