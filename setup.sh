@@ -20,7 +20,7 @@ echo 'export SQS_QUEUE_URL="https://sqs.eu-west-2.amazonaws.com/<account-id>/<qu
 source /etc/environment
 
 # Clone the GitHub repo (public repo, no authentication needed)
-git clone https://github.com/JoelBeer/clam-av-scanner.git Z/home/ec2-user/clamav-scanner
+git clone https://github.com/JoelBeer/clam-av-scanner.git /home/ec2-user/clamav-scanner
 
 # Move to the script directory
 cd /home/ec2-user/clamav-scanner
