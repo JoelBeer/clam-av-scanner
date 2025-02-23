@@ -24,7 +24,7 @@ def scan_file(bucket, file_key):
     s3.download_file(bucket, decoded_key, file_path)
 
     print(f"🔍 Scanning file: {file_path}")
-    result = subprocess.run(["clamdscan", "--fdpass", file_path], capture_output=True, text=True)
+    result = subprocess.run(["sudo", "clamdscan", "--fdpass", file_path], capture_output=True, text=True)
 
     is_clean = "false" if "FOUND" in result.stdout else "true"
     print(f"🛡 Scan Result: {is_clean}")
